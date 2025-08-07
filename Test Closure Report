@@ -1,0 +1,50 @@
+Project: Facebook Customer Authentication Flows
+Test Period: 03/06/2024 – 02/07/2025
+Tester: Andreja Mihajlovski
+
+1. Overview
+This report summarizes the closure of end-to-end manual testing for the Facebook user authentication features — Registration, Sign-In, and Sign-Out. The testing effort validated the core authentication workflows from a real user perspective, focusing on correctness, usability, and security.
+
+2. Test Objectives
+• Verify new user registration with valid and invalid inputs
+• Validate sign-in with correct, incorrect, and edge-case credentials
+• Confirm sign-out behavior including session termination and access restrictions
+
+3. Test Coverage
+• 20 detailed test cases executed (12 positive, 8 negative) covering all critical user scenarios
+• Manual UI-driven tests across different input conditions and session states
+• Validation of error handling and boundary cases
+
+4. Test Results Summary
+Status	Number of Test Cases
+Passed	25
+Failed	5
+
+5. Defects Summary
+• Total Bugs Logged: 6
+• Severity: Critical and Major
+• Categories:
+o Unclear or generic error messages on login failures
+o Missing validation messages for empty input fields
+o Protected pages accessible after sign out
+o Errors when signing out multiple times
+o Session inconsistencies due to network interruptions during sign out
+All defects are reproducible and currently assigned for fixing.
+
+6. Risks and Mitigations
+• Some backend-related issues (e.g., session handling) caused intermittent bugs; mitigation includes backend fixes and enhanced frontend validation
+• UI inconsistencies on sign-out under network disruption; recommend implementing retry logic and user-friendly feedback
+
+7. Recommendations
+• Improve error messages for clarity and user guidance
+• Enforce stricter form validation to prevent empty submissions
+• Harden session management to prevent unauthorized access post sign-out
+• Enhance handling of network interruptions during critical user actions
+
+8. Conclusion
+The manual end-to-end testing of Facebook’s authentication flows has been completed successfully, covering both positive and negative scenarios. While core features function as expected, several critical defects were identified and reported. Addressing these defects will enhance the reliability, security, and user experience of the authentication process.
+
+9. Sign-Off
+Testing is concluded, and the product is ready for release pending resolution of the reported defects.
+Tester: Andreja Mihajlovski
+Date: 02/07/2025
