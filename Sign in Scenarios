@@ -1,0 +1,7 @@
+ID        Scenario Description	                                                                                                                                                                 Type
+SI-01     Sign in with a valid registered email and correct password — user should be logged in and redirected to the dashboard/homepage.                                                        Positive
+SI-02     Sign in with a valid registered email and correct password, but with leading/trailing spaces in the email or password fields — system should trim spaces and log in successfully.      Positive
+SI-03     Sign in with a valid registered email and correct password, using a remember me checkbox — user remains logged in after closing and reopening the browser.                             Positive
+SI-04     Sign in with a valid registered email but incorrect password — system should reject login and show an error message “Invalid credentials.”                                             Negative
+SI-05     Sign in with an unregistered email address — system should reject login and show an error message “User not found.”                                                                    Negative
+SI-06     Sign in with empty email and/or password fields — system should reject login and show validation errors “Email is required,” “Password is required.”                                   Negative
