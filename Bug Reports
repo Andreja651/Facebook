@@ -1,0 +1,105 @@
+Bug Report 1 (Sign-In Negative)
+Bug ID: BUG-SI-01
+Title: Incorrect password error message unclear
+Description: When entering a valid email with a wrong password, the system shows a vague error message instead of “Invalid credentials.”
+
+Steps to Reproduce:
+1. Navigate to login page.
+2. Enter a registered email.
+3. Enter incorrect password.
+4. Click Sign In.
+
+Expected Result:
+• Error message “Invalid credentials.” is displayed.
+Actual Result:
+• Generic error “Error” is shown.
+Severity: Major
+Status: Open
+
+Bug Report 2 (Sign-In Negative)
+Bug ID: BUG-SI-02
+Title: Unregistered email login attempt shows generic error message
+Description: When a user attempts to sign in with an unregistered email, the system does not clearly inform the user that the email is not found, causing confusion.
+
+Steps to Reproduce:
+1. Navigate to the login page.
+2. Enter an unregistered email address.
+3. Enter any password.
+4. Click Sign In.
+
+Expected Result:
+• System displays error message: “User not found.”
+Actual Result:
+• System displays a generic error message such as “Login failed” without specifying the cause.
+Severity: Major
+Status: Open
+
+Bug Report 3 (Sign-In Negative)
+Bug ID: BUG-SI-03
+Title: Missing validation messages for empty email and password fields
+Description: When trying to sign in without entering an email and/or password, the system allows submission and shows no validation errors, causing confusion for the user.
+
+Steps to Reproduce:
+1. Navigate to the login page.
+2. Leave email and password fields empty.
+3. Click Sign In.
+
+Expected Result:
+• Validation messages displayed: “Email is required.” and “Password is required.”
+• Form submission is blocked until fields are filled.
+Actual Result:
+• Form is submitted or no validation messages appear.
+Severity: Critical
+Status: Open
+
+Bug Report 4 (Sign-Out Negative)
+Bug ID: BUG-SO-01
+Title: Protected pages accessible after signing out
+Description: After signing out, users can still access protected pages by entering URLs directly, bypassing authentication.
+
+Steps to Reproduce:
+1. Log in successfully.
+2. Sign out using the sign-out button.
+3. Enter the URL of a protected page (e.g., dashboard) in the browser address bar.
+
+Expected Result:
+• User is redirected to the login page and denied access.
+Actual Result:
+• User can access the protected page without logging in again.
+Severity: Critical
+Status: Open
+
+Bug Report 5 (Sign-Out Negative)
+Bug ID: BUG-SO-02
+Title: Sign-out action causes error when user is already logged out
+Description: When a user attempts to sign out again after already being logged out, the system throws an error instead of handling it gracefully
+
+Steps to Reproduce:
+1. Log in and then sign out successfully.
+2. Attempt to click the sign-out link/button again (e.g., via browser back button or UI glitch).
+
+Expected Result:
+• System remains on login page without error messages or confusion.
+Actual Result:
+• Error message or application crash occurs.
+Severity: Major
+Status: Open
+
+Bug Report 6 (Sign-Out Negative)
+Bug ID: BUG-SO-03
+Title: Network interruption during sign-out leads to inconsistent session state
+Description: If the network connection drops during the sign-out process, the user session sometimes remains active or the UI shows conflicting states.
+
+Steps to Reproduce:
+1. Log in successfully.
+2. Click Sign Out.
+3. Simulate network interruption before sign-out completes.
+4. Restore network and observe system behavior.
+
+Expected Result:
+• Session is properly terminated, and user is redirected to login page.
+• No conflicting UI states or errors occur.
+Actual Result:
+• Session may remain active or UI shows inconsistent logged-in/logged-out state.
+Severity: Major
+Status: Open
