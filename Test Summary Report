@@ -1,0 +1,31 @@
+Registration, Sign-In, and Sign-Out E2E Testing
+Project: Customer Authentication Flows
+Test Period: 03/06/2024 - 02/07/2025
+Tester(s): Andreja Mihajlovski
+
+1. Testing Scope
+This test effort focused on end-to-end testing of the customer registration, sign-in, and sign-out functionalities from a user perspective. The goal was to validate core authentication flows for correctness, usability, and security.
+
+2. Test Coverage Summary
+Feature         Scenarios Covered    Test Cases Executed     Status          Notes
+Registration    6                    12                      Completed       Covered positive & negative cases
+Sign-In         6                    12                      Completed       Included validation and edge cases
+Sign-Out        6                    6                       Completed       Covered session management & access
+
+3. Test Results Summary
+Test Case Status	Number of Test Cases
+Passed            25
+Failed            5
+
+4. Defects Found
+• 6 bugs were logged covering unclear error messages, validation issues, session management problems, and network interruptions during sign out.
+• All bugs are reproducible and assigned for fixing.
+
+5. Recommendations
+• Improve error messages for better user guidance.
+• Implement stricter validation to prevent empty submissions.
+• Fix session handling to prevent unauthorized access after sign out.
+• Handle network issues gracefully during sign out.
+
+6. Conclusion
+The core authentication flows have been thoroughly tested with focus on customer experience. While key functionalities work as expected in positive cases, identified defects should be addressed to enhance reliability and user satisfaction.
