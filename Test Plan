@@ -1,0 +1,56 @@
+1. Introduction
+This document defines the End-to-End (E2E) test plan for the core user authentication flows: Registration, Sign In, and Sign Out. The goal is to verify these workflows from a real customer's perspective using manual test documentation only.
+
+2. Objectives
+Verify that new users can register using valid and unique credentials- Ensure proper error handling during registration (e.g., already used email)- Confirm that users can sign in with valid credentials- Ensure sign-in fails with incorrect or malformed input- Validate successful sign-out and session termination behavior
+
+3. In scope features
+- User Registration
+- User Sign In
+- User Sign Out
+
+Out of Scope
+- Password reset or recovery flows
+- Third-party authentication (Google, Facebook, etc.)
+- Session timeout behavior across pages
+- Admin or staff user roles
+
+4. Test approach
+- Manual E2E testing only
+- No automation or backend validation
+- UI-driven, using browser and form inputs
+- Test coverage will include both positive and negative paths
+
+5. Key scenarios (Covered with examples)
+
+1. Registration: New user registers with valid email, password 
+2. Registration: User attempts registration with already registered email
+3. Sign In: User logs in with valid credentials 
+4. Sign In: User tries to sign in with wrong password 
+5. Sign Out: User signs out and is redirected to login page
+
+6. Assumptions
+
+- The test environment is stable and reflects production behavior
+- All backend services required (e.g., account creation, auth) are functional
+- No email verification is required to test successful registration
+- Testers act as real users using UI forms and buttons only
+
+7. Risk and Mitigation 
+
+Risk: Registration fails due to backend 
+ Mitigation: Limit testing to front-end validation scope
+
+Risk: Incomplete form validations
+ Mitigation: Note as defect and include in Bug Report
+
+Risk: Browser incompatibility 
+Mitigation: Limit testing to Chrome (unless stated)
+
+8. Deliverables
+
+- Test Plan (this document)
+- Test Scenarios & Test Cases 
+- Bug Reports 
+- Final Test Summary Report
+- Optional Screenshots for validation
