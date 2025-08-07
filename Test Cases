@@ -1,0 +1,162 @@
+Sign-In Test Case 1 (Positive)
+Test Case ID: SI-01
+Title: Sign in with valid registered email and correct password
+Preconditions: User is registered and activated in the system
+Test Steps:
+1. Navigate to the login page.
+2. Enter a registered email address in the email field.
+3. Enter the correct password in the password field.
+4. Click the Sign In button.
+Expected Result:
+• User is successfully logged in.
+• User is redirected to the dashboard/homepage.
+
+Sign-In Test Case 2 (Positive)
+Test Case ID: SI-02
+Title: Sign in with valid registered email and correct password with leading/trailing spaces
+Preconditions: User is registered and activated in the system
+Test Steps:
+1. Navigate to the login page.
+2. Enter a registered email address with leading and trailing spaces (e.g., " user@example.com ").
+3. Enter the correct password with leading and trailing spaces (e.g., " CorrectPassword123 ").
+4. Click the Sign In button.
+Expected Result:
+• The system trims the spaces from email and password fields.
+• User is successfully logged in.
+• User is redirected to the dashboard/homepage.
+
+Sign-In Test Case 3 (Positive)
+Test Case ID: SI-03
+Title: Sign in with valid registered email, correct password, and "Remember Me" checked
+Preconditions: User is registered and activated in the system
+Test Steps:
+1. Navigate to the login page.
+2. Enter a registered email address in the email field.
+3. Enter the correct password in the password field.
+4. Check the Remember Me checkbox.
+5. Click the Sign In button.
+6. Close the browser.
+7. Reopen the browser and navigate to the application homepage.
+Expected Result:
+• User is successfully logged in and redirected to the dashboard/homepage.
+• User remains logged in after closing and reopening the browser without needing to sign in again.
+
+Sign-In Test Case 4 (Negative)
+Test Case ID: SI-04
+Title: Sign in with valid registered email but incorrect password
+Preconditions: User is registered and activated in the system
+Test Steps:
+1. Navigate to the login page.
+2. Enter a registered email address in the email field.
+3. Enter an incorrect password in the password field.
+4. Click the Sign In button.
+Expected Result:
+• The system rejects the login attempt.
+• An error message is displayed: “Invalid credentials.”
+• User remains on the login page.
+
+Sign-In Test Case 5 (Negative)
+Test Case ID: SI-05
+Title: Sign in with unregistered email address
+Preconditions: Email used for sign-in is not registered in the system
+Test Steps:
+1. Navigate to the login page.
+2. Enter an unregistered email address in the email field.
+3. Enter any password in the password field.
+4. Click the Sign In button.
+
+Expected Result:
+• The system rejects the login attempt.
+• An error message is displayed: “User not found.”
+• User remains on the login page.
+
+Sign-In Test Case 6 (Negative)
+Test Case ID: SI-06
+Title: Sign in with empty email and/or password fields
+Preconditions: None
+Test Steps:
+1. Navigate to the login page.
+2. Leave the email field empty.
+3. Leave the password field empty.
+4. Click the Sign In button.
+Expected Result:
+• The system does not submit the form.
+• Validation error messages are displayed:
+o “Email is required.”
+o “Password is required.”
+• User remains on the login page.
+
+Sign-Out Test Case 1 (Positive)
+Test Case ID: SO-01
+Title: User clicks sign out button from active session
+Preconditions: User is logged in and on any authenticated page (e.g., dashboard)
+Test Steps:
+1. Locate and click the Sign Out button/link in the application header or menu.
+2. Confirm the sign out action if a confirmation prompt appears.
+Expected Result:
+• User session is terminated.
+• User is redirected to the login page.
+• User is no longer able to access authenticated pages without signing in again.
+
+Sign-Out Test Case 2 (Positive)
+Test Case ID: SO-03
+Title: User signs out after session timeout occurs automatically
+Preconditions: User is logged in and session is active
+Test Steps:
+1. Log in with valid credentials.
+2. Remain inactive until the session timeout period expires (e.g., 15 minutes of inactivity).
+3. Attempt to perform any action requiring authentication (e.g., navigate to dashboard).
+4. If prompted, perform the sign out or observe automatic session termination.
+Expected Result:
+• Yser session is invalidated after timeout.
+• User is redirected to the login page automatically or after trying to act.
+• Any further actions require signing in again.
+
+Sign-Out Test Case 3 (Positive)
+Test Case ID: SO-05
+Title: User signs out from a mobile device successfully
+Preconditions: User is logged in on a mobile browser or app
+Test Steps:
+1. On the mobile device, navigate to the user menu or settings.
+2. Tap the Sign Out button.
+3. Confirm sign out if prompted.
+Expected Result:
+• User session is terminated on the mobile device.
+• User is redirected to the login screen.
+• User cannot access authenticated pages without signing back in.
+
+Sign-Out Test Case 4 (Negative)
+Test Case ID: SO-02
+Title: User tries to access a protected page after signing out
+Preconditions: User is logged out (signed out successfully)
+Test Steps:
+1. Sign out from the application (using the sign-out button).
+2. Attempt to access a protected page URL directly (e.g., dashboard or profile page) by entering it in the browser address bar.
+Expected Result:
+• System redirects the user to the login page.
+• User cannot access any protected content without signing in again.
+
+Sign-Out Test Case 5 (Negative)
+Test Case ID: SO-04
+Title: User attempts to sign out when already signed out
+Preconditions: User is already logged out (e.g., on the login page)
+Test Steps:
+1. Attempt to click the sign-out link/button if visible (e.g., from browser history or UI glitch).
+2. Alternatively, try to send a sign-out request manually (if applicable).
+Expected Result:
+• System gracefully handles the request without errors.
+• User remains on the login page or redirected there.
+• No error messages or confusion presented to the user.
+
+Sign-Out Test Case 6 (Negative)
+Test Case ID: SO-06
+Title: User session expires during sign out process (network interruption)
+Preconditions: User is logged in and attempts to sign out
+Test Steps:
+1. Initiate sign out by clicking the Sign Out button.
+2. Simulate network interruption or timeout during sign-out request processing.
+3. Observe system behavior after network is restored or user retries.
+Expected Result:
+• System handles the interrupted sign-out gracefully.
+• User session is invalidated or maintained consistently (no stuck states).
+• User is either signed out properly or prompted to try again without confusing errors.
