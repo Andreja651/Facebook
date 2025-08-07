@@ -1,0 +1,7 @@
+ID	Title                                          Description                                                                         Type
+R1	Register with valid credentials                A new user registers with a valid email and strong password                         Positive
+R2	Register with already used email               A user tries to register using an email that already exists                         Negative
+R3	Register with invalid email format             A user enters an improperly formatted email address                                 Negative
+R4	Register with missing required fields          A user attempts to register without filling all mandatory fields                    Negative
+R5	Register with edge-case but valid password     A user registers using a password with special characters (e.g., !@123Abc$)         Positive
+R6	Register with a very long but valid email      A user registers using a very long but valid email address to check length limits   Positive
