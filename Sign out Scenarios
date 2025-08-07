@@ -1,0 +1,5 @@
+ID       Scenario Description                                                                                                                                                     Type
+SO-01    User clicks sign out button from an active session — system logs user out and redirects to the login page.                                                               Positive
+SO-02    User tries to access a protected page (e.g., dashboard) after signing out — system should redirect user to the login page, preventing unauthorized access.               Negative
+SO-03    User signs out after session timeout occurs automatically — system should invalidate the session and redirect to login without errors.                                   Positive
+SO-04    User attempts to sign out when already signed out (e.g., refreshes login page) — system gracefully handles it by remaining on login page without errors or confusion.    Negative
